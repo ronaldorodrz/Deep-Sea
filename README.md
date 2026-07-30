@@ -4,7 +4,7 @@
 
 Um jogo desenvolvido em **Python** durante o curso **Algoritmos e Programação em Python**, oferecido pela **Universidade Estadual de Feira de Santana (UEFS)**.
 
-<img src="Deep-Sea-Game/deepsea.png" alt="Preview do jogo" width="400">
+<img src="deepsea.png" alt="Preview do jogo" width="550">
 
 </div>
 
