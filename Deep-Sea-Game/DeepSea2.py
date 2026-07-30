@@ -28,9 +28,9 @@ fonte_botao = pygame.font.Font('TEXTO/textofonte.ttf', 25)
 
 # IMAGENS
 # Carrega e redimensiona a imagem de fundo.
-fundo = pygame.image.load('IMAGENS/imagemfundo.jpg')
+fundo = pygame.image.load('imagens/imagemfundo.jpg')
 novo_fundo = pygame.transform.scale(fundo, (largura, altura))
-submarino = pygame.image.load('IMAGENS/sub.png')
+submarino = pygame.image.load('imagens/sub.png')
 novo_submarino = pygame.transform.scale(submarino, ((largura // 4) + 30, altura // 6))
 # Obter tamanho da imagem redimensionada
 largura_sub, altura_sub = novo_submarino.get_size()
@@ -38,7 +38,7 @@ largura_sub, altura_sub = novo_submarino.get_size()
 x_central = (largura - largura_sub) // 2
 y_topo = -1 
 # Carrega e define o ícone da janela.
-icon = pygame.image.load('IMAGENS/submarino.png')
+icon = pygame.image.load('imagens/submarino.png')
 pygame.display.set_icon(icon)
 
 # BOTÕES
@@ -432,10 +432,10 @@ def Tela_matriz(metros, tamanho, pos_jogadores, acessiveis, tesouros, bombas):
             pygame.draw.rect(tela, branco, (x, y, tamanho_celula, tamanho_celula), 1)
     # Carrega e redimensiona as imagens dos jogadores para o tamanho das células.
     imagens_jogadores = [
-        pygame.transform.scale(pygame.image.load("IMAGENS/mergulhador.png"), (tamanho_celula, tamanho_celula)),
-        pygame.transform.scale(pygame.image.load("IMAGENS/mergulhador1.png"), (tamanho_celula, tamanho_celula)),
-        pygame.transform.scale(pygame.image.load("IMAGENS/mergulhador2.png"), (tamanho_celula, tamanho_celula)),
-        pygame.transform.scale(pygame.image.load("IMAGENS/mergulhador3.png"), (tamanho_celula, tamanho_celula)),]
+        pygame.transform.scale(pygame.image.load("imagens/mergulhador.png"), (tamanho_celula, tamanho_celula)),
+        pygame.transform.scale(pygame.image.load("imagens/mergulhador1.png"), (tamanho_celula, tamanho_celula)),
+        pygame.transform.scale(pygame.image.load("imagens/mergulhador2.png"), (tamanho_celula, tamanho_celula)),
+        pygame.transform.scale(pygame.image.load("imagens/mergulhador3.png"), (tamanho_celula, tamanho_celula)),]
     # Loop para desenhar os jogadores nas posições especificadas.
     for i, pos in enumerate(pos_jogadores):
         linha, coluna = pos
