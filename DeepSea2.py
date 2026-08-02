@@ -3,11 +3,11 @@ import time
 import random
 
 # INICIALIZADOR
-# Inicializa todos os módulos do Pygame.
+# Inicializa todos os módulos do Pygame
 pygame.init()
 
 # TELA
-# Define a altura e a largura da tela.
+# Define a altura e a largura da tela
 largura, altura = 1130, 680
 tela = pygame.display.set_mode((largura, altura))
 # Define o título da janela.
@@ -16,18 +16,18 @@ pygame.display.set_caption("Deep Sea 2")
 tamanho_matriz = 550 
 
 # CORES
-# Define as cores usadas no jogo.
+# Define as cores usadas no jogo
 preto = (0, 0, 0)
 branco = (255, 250, 250)
 cinza = (28, 28, 28)
 # FONTE
-# Define a fonte e o tamanho do texto.
+# Define a fonte e o tamanho do texto
 fonte = pygame.font.Font('TEXTO/textofonte.ttf', 40)
 fonte_menor = pygame.font.Font('TEXTO/textofonte.ttf', 30)
 fonte_botao = pygame.font.Font('TEXTO/textofonte.ttf', 25)
 
 # IMAGENS
-# Carrega e redimensiona a imagem de fundo.
+# Carrega e redimensiona a imagem de fundo
 fundo = pygame.image.load('imagens/imagemfundo.jpg')
 novo_fundo = pygame.transform.scale(fundo, (largura, altura))
 submarino = pygame.image.load('imagens/sub.png')
@@ -37,7 +37,7 @@ largura_sub, altura_sub = novo_submarino.get_size()
 # Calcular posição para centralizar no topo
 x_central = (largura - largura_sub) // 2
 y_topo = -1 
-# Carrega e define o ícone da janela.
+# Carrega e define o ícone da janela
 icon = pygame.image.load('imagens/submarino.png')
 pygame.display.set_icon(icon)
 
