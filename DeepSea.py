@@ -28,7 +28,7 @@ print('''\033[96m
 
 \033[93m💡 Dica: Deposite os tesouros no submarino para economizar oxigênio! 💡\033[0m''')
 
-# CONFIGURAÇÃO DO JOGO.
+# CONFIGURAÇÃO DO JOGO
 print('\033[96m\n------  Fase de configuração 🔧  ------\033[0m\n')
 
 # QUANTIDADE DE JOGADORES.
@@ -39,7 +39,7 @@ while quantidade not in [4, 5, 6]:
     else:
         print('\033[91mDados inválidos.\033[0m')
 
-# TAMANHO DO MAPA EM METROS.
+# TAMANHO DO MAPA EM METROS
 while metros not in [15, 30, 45]:
     metros = int(input('Vocês querem que a profundidade do mapa seja de 15, 30 ou 45 metros: '))
     if metros in [15, 30, 45]:
@@ -47,7 +47,7 @@ while metros not in [15, 30, 45]:
     else:
         print('\033[91mDados inválidos.\033[0m')
 
-# QUANTIDADE DE TANQUES.
+# QUANTIDADE DE TANQUES
 while not 45 <= tanques <= 120:
     tanques = int(input('Escolha quantos tanques serão consumidos, entre 45 a 120: '))
     if 45 <= tanques <= 120:
@@ -55,18 +55,18 @@ while not 45 <= tanques <= 120:
     else:
         print('\033[91mDados inválidos.\033[0m')
 
-# LISTA DE INICIALIZAÇÃO DOS JOGADORES.
+# LISTA DE INICIALIZAÇÃO DOS JOGADORES
 posição_do_jogador = [0] * quantidade
 tesouro_do_jogador = [0] * quantidade
 tesouro = [[] for _ in range(metros + 1)]
 
-# STATUS DOS JOGADORES.
+# STATUS DOS JOGADORES
 def status_do_jogador(posição_do_jogador, tesouro_do_jogador):
     print('\n\033[96m------  Status dos Jogadores  ------\033[0m\n')
     for i in range(quantidade):
         print(f"Jogador {i+1} - Posição: {posição_do_jogador[i]} metros, tesouro: {tesouro_do_jogador[i]}")
 
-# MAPA DO JOGO.
+# MAPA DO JOGO
 def print_mapa(posição_do_jogador):
     print('\033[96m\n------  Mapa do jogo 🗺️  ------\n\033[0m')
     mapa = ["[        ]"] * (metros + 1)
@@ -79,7 +79,7 @@ def print_mapa(posição_do_jogador):
     for i in range(len(mapa)):
         print(f"{mapa[i]}  - {i} metros")
 
-# PESO DOS TESOUROS.
+# PESO DOS TESOUROS
 def peso_dos_tesouros(profundidade, metros):
     terço = metros // 3  
     if profundidade < terço:
@@ -89,12 +89,12 @@ def peso_dos_tesouros(profundidade, metros):
     else:
         return 4
 
-# VENCEDOR DO JOGO.
+# VENCEDOR DO JOGO
 def vencedor(tesouro_do_jogador):
     maior_tesouro = max(tesouro_do_jogador)
     return maior_tesouro
 
-# OXIGENIO RESTANTE.
+# OXIGENIO RESTANTE
 def oxigenio(tanques):
     if tanques > 0:
         print(f"\033[91mTanques restantes: {tanques}\n\033[0m")
@@ -103,10 +103,10 @@ def oxigenio(tanques):
     elif tanques < 0:
         return 
 
-# PRESSIONE ENTER.
+# PRESSIONE ENTER
 input('\n\033[91mPRESSIONE ENTER PARA COMEÇAR O JOGO.\033[0m')
 
-# TURNO DOS JOGADORES. 
+# TURNO DOS JOGADORES
 while tanques > 0:
     escolha = 0
     print_mapa(posição_do_jogador)
@@ -120,7 +120,7 @@ while tanques > 0:
         if escolha not in [1, 2, 3, 4, 5]:
             print('\033[91mDados inválidos.\033[0m')
 
-# MOVIMENTO DOS JOGADORES + TESOURO.
+# MOVIMENTO DOS JOGADORES + TESOURO
     if escolha in [1, 2, 3, 4, 5]:
         if escolha == 1:
             print('\033[92mVocê passou a vez.\n\033[0m')
@@ -150,19 +150,19 @@ while tanques > 0:
         elif escolha == 5:
             print('\033[92mVocê não quis pegar o tesouro.\033[0m')
 
-# CADA PARTIDA GASTA O OXIGENIO.
+# CADA PARTIDA GASTA O OXIGENIO
     consumo_de_oxigenio = tesouro_do_jogador[jogador_atual] + 1
     tanques -= consumo_de_oxigenio
     oxigenio(tanques)
     turno += 1
 
-# FIM DO JOGO.
+# FIM DO JOGO
 print('\033[96m\n------  Fim de Jogo ⛵  ------\033[0m\n')
 
-# VENCEDOR DO JOGO.
+# VENCEDOR DO JOGO
 print(f'O jogo teve um total de {turno} turnos.')
 vencedor_do_jogo = tesouro_do_jogador.index(vencedor(tesouro_do_jogador)) + 1
 print(f"\nO vencedor da partida é: Jogador {vencedor_do_jogo} com {tesouro_do_jogador[vencedor_do_jogo - 1]} kg de tesouros.\n")
 
-# PRESSIONE ENTER.
+# PRESSIONE ENTER
 input('\033[91mPRESSIONE ENTER PARA TERMINAR O JOGO.\033[0m')
