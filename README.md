@@ -1,20 +1,16 @@
 <div align="center">
 
-# 🌊 Deep Sea Game
+# 🌊 Deep Sea
 
-Um jogo desenvolvido em **Python** durante o curso **Algoritmos e Programação em Python**, oferecido pela **Universidade Estadual de Feira de Santana (UEFS)**.
-
-<img src="deepsea.png" alt="Preview do jogo" width="550">
+Jogo desenvolvido em **Python** durante a disciplina de **Algoritmos e Programação** da **Universidade Estadual de Feira de Santana (UEFS)**.
 
 </div>
 
 ## Sobre o projeto
 
-O **Deep Sea** é um projeto desenvolvido durante o curso **Algoritmos e Programação em Python** da **Universidade Estadual de Feira de Santana (UEFS)**, com o objetivo de colocar em prática os conceitos aprendidos ao longo das aulas.
+O **Deep Sea** foi criado para aplicar na prática os conceitos aprendidos ao longo do curso. O repositório reúne **duas versões do jogo**, que mostram a evolução do desenvolvimento:
 
-O repositório reúne **duas versões do jogo**, representando a evolução do projeto durante o curso:
+- **DeepSea.py**: versão executada no **terminal**, focada na lógica de programação, estruturas de controle e interação em modo texto.
+- **DeepSea2.py**: versão desenvolvida com a biblioteca **Pygame**, que adiciona interface gráfica, imagens e movimentação dos elementos em tempo real.
 
-- **DeepSea.py**: versão executada no **terminal**, desenvolvida para praticar lógica de programação, estruturas de controle e interação por meio do console.
-- **DeepSea2.py**: versão desenvolvida com a biblioteca **Pygame**, que utiliza interface gráfica, imagens e movimentação dos elementos do jogo.
-
-As duas versões demonstram a evolução do projeto, desde uma implementação em modo texto até uma versão gráfica, aplicando os conhecimentos adquiridos em programação e desenvolvimento de jogos com Python.
+Essa transição da versão em texto para a versão gráfica demonstra o progresso do projeto e a aplicação prática dos conhecimentos adquiridos em Python.
